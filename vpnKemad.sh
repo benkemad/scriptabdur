@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Original script by fornesia, rzengineer and fawzya
-# Mod by Bagus
+# Mod by Abdur
 # ==================================================
 
 # initialisasi var
@@ -37,10 +37,10 @@ cd
 sudo apt-get -y install nginx
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/benkemad/scriptbagus/master/nginx-default.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/benkemad/scriptabdur/master/nginx-default.conf"
 mkdir -p /home/vps/public_html
 echo "<?php phpinfo() ?>" > /home/vps/public_html/info.php
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/benkemad/scriptbagus/master/vhost-nginx.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/benkemad/scriptabdur/master/vhost-nginx.conf"
 /etc/init.d/nginx restart
 
 # instal nginx php5.6 
@@ -58,10 +58,10 @@ sed -i 's/listen = \/run\/php\/php5.6-fpm.sock/listen = 127.0.0.1:9000/g' /etc/p
 cd
 
 # Edit port apache2 ke 8090
-wget -O /etc/apache2/ports.conf "https://raw.githubusercontent.com/benkemad/scriptbagus/master/apache2.conf"
+wget -O /etc/apache2/ports.conf "https://raw.githubusercontent.com/benkemad/scriptabdur/master/apache2.conf"
 
 # Edit port virtualhost apache2 ke 8090
-wget -O /etc/apache2/sites-enabled/000-default.conf "https://raw.githubusercontent.com/benkemad/scriptbagus/master/virtualhost.conf"
+wget -O /etc/apache2/sites-enabled/000-default.conf "https://raw.githubusercontent.com/benkemad/scriptabdur/master/virtualhost.conf"
 
 # restart apache2
 /etc/init.d/apache2 restart
@@ -78,7 +78,7 @@ mkdir /etc/openvpn/easy-rsa/keys
 
 # Kemudian edit file variabel easy-rsa
 # nano /etc/openvpn/easy-rsa/vars
-wget -O /etc/openvpn/easy-rsa/vars "https://raw.githubusercontent.com/benkemad/scriptbagus/master/vars.conf"
+wget -O /etc/openvpn/easy-rsa/vars "https://raw.githubusercontent.com/benkemad/scriptabdur/master/vars.conf"
 # edit projek export KEY_NAME="white-vps"
 # Save dan keluar dari editor
 
@@ -237,8 +237,8 @@ cd clientconfig
 # Buat config client UDP 1194
 cd /etc/openvpn
 cat > /etc/openvpn/client-udp-1194.ovpn <<-END
-##### WELCOME TO PANDASSH #####
-##### WWW.PANDASSH.COM #####
+##### WELCOME TO RUMAHCONFIG SERVER #####
+##### WWW.RUMAHCONFIG.COM #####
 ##### DONT FORGET TO SUPPORT US #####
 client
 dev tun
@@ -258,8 +258,8 @@ sed -i $MYIP2 /etc/openvpn/client-udp-1194.ovpn;
 
 # Buat config client TCP 1194
 cat > /etc/openvpn/client-tcp-1194.ovpn <<-END
-##### WELCOME TO PANDASSH #####
-##### WWW.PANDASSH.COM #####
+##### WELCOME TO RUMAHCONFIG SERVER #####
+##### WWW.RUMAHCONFIG.COM #####
 ##### DONT FORGET TO SUPPORT US #####
 client
 dev tun
@@ -279,8 +279,8 @@ sed -i $MYIP2 /etc/openvpn/client-tcp-1194.ovpn;
 
 # Buat config client UDP 2200
 cat > /etc/openvpn/client-udp-2200.ovpn <<-END
-##### WELCOME TO PANDASSH #####
-##### WWW.PANDASSH.COM #####
+##### WELCOME TO RUMAHCONFIG SERVER #####
+##### WWW.RUMAHCONFIG.COM #####
 ##### DONT FORGET TO SUPPORT US #####
 client
 dev tun
@@ -300,8 +300,8 @@ sed -i $MYIP2 /etc/openvpn/client-udp-2200.ovpn;
 
 # Buat config client TCP 2200
 cat > /etc/openvpn/client-tcp-2200.ovpn <<-END
-##### WELCOME TO PANDASSH #####
-##### WWW.PANDASSH.COM #####
+##### WELCOME TO RUMAHCONFIG SERVER #####
+##### WWW.RUMAHCONFIG.COM #####
 ##### DONT FORGET TO SUPPORT US #####
 client
 dev tun
