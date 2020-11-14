@@ -2,4 +2,4 @@
 
 clear
 neofetch
-echo -e "by AdminPandassh"
+echo -e "by AdminRumahConfig"
