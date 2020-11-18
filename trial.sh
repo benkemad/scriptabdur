@@ -1,24 +1,43 @@
 #!/bin/bash
 
-IP=`curl icanhazip.com`
+IP=$(wget -qO- ipv4.icanhazip.com);
 
 Login=trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
 hari="1"
 Pass=`</dev/urandom tr -dc a-f0-9 | head -c9`
 
+# Modifikasi Terminal
 
-echo Script AutoCreate Akun SSH dan OpenVPN by kemaddd
-sleep 1
-echo Ping Host
-echo Cek Hak Akses...
+white='\e[1;37m'
+green='\e[32m'
+purple='\e[1;35m'
+blue='\e[0;31m'
+red='\e[1;32m'
+
+echo ""
+echo -e $white"      =====================================================" 
 sleep 0.5
-echo Permission Accepted
-clear
+echo -e $purple "      #                                                   #" 
 sleep 0.5
-echo Membuat Akun: $Login
+echo -e $green "      #                 [MEMBUAT AKUN TRIAL]              #" 
 sleep 0.5
-echo Setting Password: $Pass
+echo -e $blue "      #                                                   #" 
 sleep 0.5
+echo -e $green "      #                   Mohon menunggu                  #" 
+sleep 0.5
+echo -e $red "      #                                                   #" 
+sleep 0.5
+echo -e $blue "      #              Akun Telah Berhasil Dibuat           #" 
+sleep 0.5
+echo -e $red "      #                                                  #" 
+sleep 0.5
+echo -e $purple "      #                  Terima Kasih                   #" 
+sleep 0.5
+echo -e $green "      #                                                   #" 
+sleep 0.5
+echo -e $blue "      #        Copyright © AbdurRahman™ Premium 2020        #" 
+sleep 0.5
+echo -e $white "      =====================================================" 
 clear
 useradd -e `date -d "$masaaktif days" +"%Y-%m-%d"` -s /bin/false -M $Login
 exp="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
