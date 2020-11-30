@@ -806,7 +806,7 @@ cd
 apt-get install -y libxml-parser-perl
 
 # banner /etc/issue.net
-wget -O /etc/issue.net "https://raw.githubusercontent.com/benkemad/scriptbagus/master/issue.net"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/benkemad/scriptabdur/master/issue.net"
 sed -i 's@#Banner@Banner@g' /etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
